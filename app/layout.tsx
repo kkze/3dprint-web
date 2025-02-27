@@ -26,8 +26,8 @@ export default function RootLayout({
             <div className="flex items-center gap-4">
               <MobileNav />
               <Link href="/" className="flex items-center space-x-2">
-                <Image src="/logo.svg" alt="3DPrint-Web Logo" width={40} height={40} />
-                <span className="font-bold">3DPrint-Web</span>
+                {/* <Image src="/logo.svg" alt="3DPrint-Web Logo" width={40} height={40} /> */}
+                <span className="font-bold">3DPrint-Studio</span>
               </Link>
               <nav className="hidden space-x-6 md:flex">
                 <Link href="/" className="text-sm font-medium transition-colors hover:text-primary">

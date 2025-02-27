@@ -3,6 +3,10 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
+import Materials from "@/app/img/materials.png"
+import Processing from "@/app/img/processing.png"
+import Modeling from "@/app/img/modeling.png"
+import Printers from "@/app/img/printers.png"
 
 export default function Home() {
   const services = [
@@ -13,15 +17,16 @@ export default function Home() {
     { name: "CLIP", icon: Printer3d },
   ]
 
+
   return (
     <>
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-blue-50 to-white">
-        <div className="container py-12 md:py-24">
+        <div className="container pt-12 md:py-10">
           <div className="mx-auto max-w-[800px] text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6">专业的3D打印解决方案</h1>
-            <p className="text-lg text-muted-foreground mb-8">从概念到实物，我们为您提供高质量、快速的3D打印服务</p>
-            <div className="rounded-lg border-2 border-dashed pt-32 border-muted min-h-[400px] p-12 hover:bg-sky-100 transition-colors cursor-pointer">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6">专业3D打印解决方案</h1>
+            <p className="text-lg text-muted-foreground mb-8">从概念到实物，我们为您提供高质量、快速的在线3D打印服务</p>
+            <div className="rounded-lg border-2 border-dashed pt-32 border-muted min-h-[360px] p-12 hover:bg-sky-100 transition-colors cursor-pointer">
               <Upload className="mx-auto h-12 w-12 text-muted-foreground" />
               <h2 className="mt-4 text-xl font-semibold">上传您的3D文件</h2>
             </div>
@@ -33,7 +38,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="container py-12 md:py-24">
+      <section className="container md:pb-16">
         <h2 className="text-3xl font-bold text-center mb-12">我们的服务</h2>
         <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-5">
           {services.map((service, i) => (
@@ -52,7 +57,7 @@ export default function Home() {
         <div className="container grid gap-12 md:grid-cols-2 md:items-center">
           <div className="aspect-square rounded-lg bg-muted overflow-hidden">
             <Image
-              src="/materials.jpg"
+              src={Materials}
               alt="3D打印材料"
               width={600}
               height={600}
@@ -85,7 +90,7 @@ export default function Home() {
           </div>
           <div className="aspect-square rounded-lg bg-muted overflow-hidden order-1 md:order-2">
             <Image
-              src="/post-processing.jpg"
+              src={Processing}
               alt="3D打印后处理"
               width={600}
               height={600}
@@ -100,7 +105,7 @@ export default function Home() {
         <div className="container grid gap-12 md:grid-cols-2 md:items-center">
           <div className="aspect-square rounded-lg bg-muted overflow-hidden">
             <Image
-              src="/3d-modeling.jpg"
+              src={Modeling}
               alt="3D建模"
               width={600}
               height={600}
@@ -133,7 +138,7 @@ export default function Home() {
           </div>
           <div className="aspect-square rounded-lg bg-muted overflow-hidden order-1 md:order-2">
             <Image
-              src="/3d-printers.jpg"
+              src={Printers}
               alt="3D打印机"
               width={600}
               height={600}
