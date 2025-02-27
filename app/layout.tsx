@@ -2,15 +2,15 @@ import type React from "react"
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { Button } from "@/components/button"
+import { Button } from "@/components/ui/button"
 import { Phone, Mail, MapPin, Linkedin } from "lucide-react"
 import "./globals.css"
 import { Wechat, Weibo } from "@/components/icons"
 import { MobileNav } from "@/components/mobile-nav"
 
 export const metadata: Metadata = {
-  title: "3DPrint-Web",
-  description: "专业的3D打印服务平台",
+  title: "3DPrint-Web - 专业的3D打印服务平台",
+  description: "提供高质量、快速的3D打印解决方案，满足各行业需求。",
 }
 
 export default function RootLayout({
@@ -19,30 +19,30 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="zh">
-      <body className="min-h-screen bg-background">
-        {/* Header */}
-        <header className="sticky top-0 z-50 border-b bg-background">
+    <html lang="zh" className="scroll-smooth">
+      <body className="min-h-screen bg-background font-sans antialiased">
+        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
           <div className="container flex h-16 items-center justify-between">
-            <div className="flex items-center">
+            <div className="flex items-center gap-4">
               <MobileNav />
-              <Link href="/" className="ml-4 md:ml-0">
-                <Image src="/placeholder.svg" alt="Logo" width={120} height={40} className="h-10 w-auto" />
+              <Link href="/" className="flex items-center space-x-2">
+                <Image src="/logo.svg" alt="3DPrint-Web Logo" width={40} height={40} />
+                <span className="font-bold">3DPrint-Web</span>
               </Link>
-              <nav className="hidden space-x-6 ml-8 md:flex">
-                <Link href="/" className="text-sm font-medium hover:text-primary">
+              <nav className="hidden space-x-6 md:flex">
+                <Link href="/" className="text-sm font-medium transition-colors hover:text-primary">
                   首页
                 </Link>
-                <Link href="#" className="text-sm font-medium hover:text-primary">
+                <Link href="#solutions" className="text-sm font-medium transition-colors hover:text-primary">
                   解决方案
                 </Link>
-                <Link href="#" className="text-sm font-medium hover:text-primary">
+                <Link href="#industries" className="text-sm font-medium transition-colors hover:text-primary">
                   行业
                 </Link>
-                <Link href="/test" className="text-sm font-medium hover:text-primary">
+                <Link href="/test" className="text-sm font-medium transition-colors hover:text-primary">
                   测试页面
                 </Link>
-                <Link href="#" className="text-sm font-medium hover:text-primary">
+                <Link href="#resources" className="text-sm font-medium transition-colors hover:text-primary">
                   资源
                 </Link>
               </nav>
@@ -51,71 +51,67 @@ export default function RootLayout({
               <Button variant="ghost" size="sm">
                 登录
               </Button>
-              <Button variant="default" size="sm">
-                注册
-              </Button>
+              <Button size="sm">注册</Button>
             </div>
           </div>
         </header>
 
-        {/* Main content */}
-        <main className="flex-1">{children}</main>
+        <main>{children}</main>
 
-        {/* Footer */}
         <footer className="border-t bg-muted/50">
-          <div className="container grid gap-8 py-12 md:grid-cols-4">
+          <div className="container grid gap-8 py-12 md:grid-cols-2 lg:grid-cols-4">
             <div>
               <h3 className="mb-4 text-sm font-semibold">快速链接</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="/" className="hover:text-primary">
+                  <Link href="/" className="text-muted-foreground transition-colors hover:text-primary">
                     首页
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-primary">
+                  <Link href="#solutions" className="text-muted-foreground transition-colors hover:text-primary">
                     解决方案
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-primary">
+                  <Link href="#industries" className="text-muted-foreground transition-colors hover:text-primary">
                     行业
                   </Link>
                 </li>
                 <li>
-                  <Link href="/test" className="hover:text-primary">
+                  <Link href="/test" className="text-muted-foreground transition-colors hover:text-primary">
                     测试页面
                   </Link>
                 </li>
               </ul>
             </div>
-            <div className="space-y-4">
-              <h3 className="text-sm font-semibold">联系方式</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+            <div>
+              <h3 className="mb-4 text-sm font-semibold">联系方式</h3>
+              <ul className="space-y-2 text-sm">
                 <li className="flex items-center space-x-2">
-                  <Phone className="h-4 w-4" />
-                  <span>400-123-4567</span>
+                  <Phone className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">400-123-4567</span>
                 </li>
                 <li className="flex items-center space-x-2">
-                  <Mail className="h-4 w-4" />
-                  <span>contact@example.com</span>
+                  <Mail className="h-4 w-4 text-muted-foreground" />
+                  <span className="text-muted-foreground">contact@example.com</span>
                 </li>
               </ul>
             </div>
             <div>
               <h3 className="mb-4 text-sm font-semibold">办事处</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
+              <ul className="space-y-2 text-sm">
                 <li className="flex items-start space-x-2">
-                  <MapPin className="h-4 w-4 mt-0.5" />
-                  <span>
+                  <MapPin className="h-4 w-4 mt-0.5 text-muted-foreground" />
+                  <span className="text-muted-foreground">
                     北京市朝阳区
                     <br />
                     科技园区123号
                   </span>
                 </li>
                 <li className="flex items-start space-x-2">
-                  <MapPin className="h-4 w-4 mt-0.5" />
-                  <span>
+                  <MapPin className="h-4 w-4 mt-0.5 text-muted-foreground" />
+                  <span className="text-muted-foreground">
                     上海市浦东新区
                     <br />
                     创新路456号
@@ -126,15 +122,15 @@ export default function RootLayout({
             <div>
               <h3 className="mb-4 text-sm font-semibold">关注我们</h3>
               <div className="flex space-x-4">
-                <Link href="#" className="hover:text-primary">
+                <Link href="#" className="text-muted-foreground hover:text-primary">
                   <Wechat className="h-5 w-5" />
                   <span className="sr-only">微信</span>
                 </Link>
-                <Link href="#" className="hover:text-primary">
+                <Link href="#" className="text-muted-foreground hover:text-primary">
                   <Weibo className="h-5 w-5" />
                   <span className="sr-only">微博</span>
                 </Link>
-                <Link href="#" className="hover:text-primary">
+                <Link href="#" className="text-muted-foreground hover:text-primary">
                   <Linkedin className="h-5 w-5" />
                   <span className="sr-only">领英</span>
                 </Link>
