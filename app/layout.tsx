@@ -1,12 +1,10 @@
 import type React from "react"
 import type { Metadata } from "next"
-import Image from "next/image"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import { Phone, Mail, MapPin, Linkedin } from "lucide-react"
 import "./globals.css"
-import { Wechat, Weibo } from "@/components/icons"
-import { MobileNav } from "@/components/mobile-nav"
+import { Wechat, Weibo } from "@/app/components/icons"
+import Header from "./components/header"
 
 export const metadata: Metadata = {
   title: "3DPrint-Web - 专业的3D打印服务平台",
@@ -21,43 +19,9 @@ export default function RootLayout({
   return (
     <html lang="zh" className="scroll-smooth">
       <body className="min-h-screen bg-background font-sans antialiased">
-        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-          <div className="container flex h-16 items-center justify-between">
-            <div className="flex items-center gap-4">
-              <MobileNav />
-              <Link href="/" className="flex items-center space-x-2">
-                {/* <Image src="/logo.svg" alt="3DPrint-Web Logo" width={40} height={40} /> */}
-                <span className="font-bold">3DPrint-Studio</span>
-              </Link>
-              <nav className="hidden space-x-6 md:flex">
-                <Link href="/" className="text-sm font-medium transition-colors hover:text-primary">
-                  首页
-                </Link>
-                <Link href="#solutions" className="text-sm font-medium transition-colors hover:text-primary">
-                  解决方案
-                </Link>
-                <Link href="#industries" className="text-sm font-medium transition-colors hover:text-primary">
-                  行业
-                </Link>
-                <Link href="/test" className="text-sm font-medium transition-colors hover:text-primary">
-                  测试页面
-                </Link>
-                <Link href="#resources" className="text-sm font-medium transition-colors hover:text-primary">
-                  资源
-                </Link>
-              </nav>
-            </div>
-            <div className="hidden md:flex items-center space-x-4">
-              <Button variant="ghost" size="sm">
-                登录
-              </Button>
-              <Button size="sm">注册</Button>
-            </div>
-          </div>
-        </header>
-
+        {/* <ScrollController /> */}
+        <Header />
         <main>{children}</main>
-
         <footer className="border-t bg-muted/50">
           <div className="container grid gap-8 py-12 md:grid-cols-2 lg:grid-cols-4">
             <div>

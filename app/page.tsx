@@ -1,13 +1,13 @@
 import { Upload, PrinterIcon as Printer3d, Layers, PaintBucket, CuboidIcon as Cube } from "lucide-react"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import ScrollHandler from "@/app/components/scroll-handler";
+import { Card, CardContent } from "@/app/components/ui/card"
+import { Button } from "@/app/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
 import Materials from "@/app/img/materials.png"
 import Processing from "@/app/img/processing.png"
 import Modeling from "@/app/img/modeling.png"
 import Printers from "@/app/img/printers.png"
-
 export default function Home() {
   const services = [
     { name: "FDM", icon: Printer3d },
@@ -17,11 +17,13 @@ export default function Home() {
     { name: "CLIP", icon: Printer3d },
   ]
 
+  
 
   return (
     <>
+      <ScrollHandler />
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-blue-50 to-white">
+      <section id="Hero" className="bg-gradient-to-b from-blue-50 to-white">
         <div className="container pt-12 md:py-10">
           <div className="mx-auto max-w-[800px] text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6">专业3D打印解决方案</h1>
@@ -35,12 +37,8 @@ export default function Home() {
             </Link>
           </div>
         </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="container md:pb-16">
-        <h2 className="text-3xl font-bold text-center mb-12">我们的服务</h2>
-        <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-5">
+         <h2 className="text-3xl font-bold text-center mb-12">我们的服务</h2>
+        <div className="grid grid-cols-2 gap-6 md:grid-cols-3  md:mx-64 lg:grid-cols-5">
           {services.map((service, i) => (
             <Card key={i} className="p-6 hover:shadow-lg transition-shadow">
               <CardContent className="flex flex-col items-center text-center">
@@ -52,8 +50,13 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section className="container md:pb-16">
+       
+      </section>
+
       {/* Materials Section */}
-      <section className="bg-gray-50 py-12 md:py-24">
+      <section id="Materials" className="bg-gray-50 py-12 md:py-24">
         <div className="container grid gap-12 md:grid-cols-2 md:items-center">
           <div className="aspect-square rounded-lg bg-muted overflow-hidden">
             <Image
@@ -77,7 +80,7 @@ export default function Home() {
       </section>
 
       {/* Post-processing Section */}
-      <section className="container py-12 md:py-24">
+      <section id="Processing" className="container py-12 md:py-24">
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <div className="space-y-4 order-2 md:order-1">
             <h2 className="text-3xl font-bold">后处理</h2>
@@ -101,7 +104,7 @@ export default function Home() {
       </section>
 
       {/* 3D Model Section */}
-      <section className="bg-gray-50 py-12 md:py-24">
+      <section id="Modeling" className="bg-gray-50 py-12 md:py-24">
         <div className="container grid gap-12 md:grid-cols-2 md:items-center">
           <div className="aspect-square rounded-lg bg-muted overflow-hidden">
             <Image
@@ -125,7 +128,7 @@ export default function Home() {
       </section>
 
       {/* 3D Printer Sales Section */}
-      <section className="container py-12 md:py-24">
+      <section id="Printer" className="container py-12 md:py-24">
         <div className="grid gap-12 md:grid-cols-2 md:items-center">
           <div className="space-y-4 order-2 md:order-1">
             <h2 className="text-3xl font-bold">想要属于自己的打印机吗?</h2>
@@ -149,7 +152,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="bg-gray-50 py-12 md:py-24">
+      <section id="Testimonials" className="bg-gray-50 py-12 md:py-24">
         <div className="container">
           <h2 className="text-3xl font-bold text-center mb-12">客户对我们的评价</h2>
           <div className="grid gap-6 md:grid-cols-3">
@@ -183,7 +186,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="container py-12 md:py-24 text-center">
+      <section id="CTA" className="container py-12 md:py-24 text-center">
         <h2 className="text-3xl font-bold mb-4">准备开始您的3D打印项目了吗？</h2>
         <p className="text-xl text-muted-foreground mb-8">联系我们，让我们一起将您的创意变为现实。</p>
         <Button size="lg">立即咨询</Button>

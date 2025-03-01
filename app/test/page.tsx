@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+import { Card, CardHeader, CardTitle, CardContent } from "@/app/components/ui/card"
 
 export default function TestPage() {
   return (
@@ -28,6 +28,256 @@ export default function TestPage() {
           </CardContent>
         </Card>
 
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>测试内容 2</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">
+              您可以看到页首始终固定在页面顶部，而页脚则始终显示在页面底部。这种布局结构适用于网站的所有页面。
+            </p>
+          </CardContent>
+        </Card>
         <Card>
           <CardHeader>
             <CardTitle>测试内容 3</CardTitle>

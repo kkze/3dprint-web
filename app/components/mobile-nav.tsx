@@ -2,8 +2,8 @@
 
 import Link from "next/link"
 import { Menu } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
+import { Button } from "@/app/components/ui/button"
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/app/components/ui/sheet"
 
 export function MobileNav() {
   return (
@@ -11,7 +11,7 @@ export function MobileNav() {
       <SheetTrigger asChild>
         <Button variant="ghost" size="icon" className="md:hidden">
           <Menu className="h-5 w-5" />
-          <span className="sr-only">打开菜单</span>
+          {/* <span className="sr-only">打开菜单</span> */}
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="w-72">
@@ -19,19 +19,19 @@ export function MobileNav() {
           <SheetTitle>导航菜单</SheetTitle>
         </SheetHeader>
         <div className="mt-4 flex flex-col space-y-3">
-          <Link href="/" className="text-base font-medium hover:text-primary">
+          <Link href="/"  scroll={false} className="text-base font-medium hover:text-primary">
             首页
           </Link>
-          <Link href="#" className="text-base font-medium hover:text-primary">
+          <Link href="#" scroll={false}  className="text-base font-medium hover:text-primary">
             解决方案
           </Link>
-          <Link href="#" className="text-base font-medium hover:text-primary">
+          <Link href="#" scroll={false}  className="text-base font-medium hover:text-primary">
             行业
           </Link>
-          <Link href="/test" className="text-base font-medium hover:text-primary">
+          <Link href="/test" scroll={false}  className="text-base font-medium hover:text-primary">
             测试页面
           </Link>
-          <Link href="#" className="text-base font-medium hover:text-primary">
+          <Link href="#" scroll={false}  className="text-base font-medium hover:text-primary">
             资源
           </Link>
         </div>

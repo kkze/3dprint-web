@@ -73,5 +73,10 @@
   body {
     @apply bg-background text-foreground;
   }
+  section {
+    will-change: transform;
+    backface-visibility: hidden;
+    /* height: 100vh; */
+  }
+ 
 }
-
