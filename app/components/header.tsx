@@ -1,5 +1,21 @@
+/*
+ * @Author: kkzh 1527227806@qq.com
+ * @Date: 2025-03-02 13:14:17
+ * @LastEditors: kkzh 1527227806@qq.com
+ * @LastEditTime: 2025-03-03 19:37:48
+ * @FilePath: \3dprint-web\app\components\header.tsx
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
+/*
+ * @Author: kkzh 1527227806@qq.com
+ * @Date: 2025-03-02 13:14:17
+ * @LastEditors: kkzh 1527227806@qq.com
+ * @LastEditTime: 2025-03-03 18:50:04
+ * @FilePath: \3dprint-web\app\components\header.tsx
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 'use client';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';  // 移除未使用的useEffect
 import { MobileNav } from './mobile-nav';
 import { Button } from "@/app/components/ui/button"
 import Link from 'next/link';
@@ -7,11 +23,8 @@ import Link from 'next/link';
 export default function Header() {
     const headerRef = useRef<HTMLElement>(null);
 
-
-
     return (
-
-        <header ref={headerRef} id="main-header" className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <header ref={headerRef} id="main-header" className="fixed top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="container flex h-16 items-center justify-between">
                 <div className="flex items-center gap-4">
                     <MobileNav />

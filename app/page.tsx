@@ -1,5 +1,4 @@
 import { Upload, PrinterIcon as Printer3d, Layers, PaintBucket, CuboidIcon as Cube } from "lucide-react"
-import ScrollHandler from "@/app/components/scroll-handler";
 import { Card, CardContent } from "@/app/components/ui/card"
 import { Button } from "@/app/components/ui/button"
 import Link from "next/link"
@@ -20,8 +19,7 @@ export default function Home() {
   
 
   return (
-    <>
-      <ScrollHandler />
+    <main>
       {/* Hero Section */}
       <section id="Hero" className="bg-gradient-to-b from-blue-50 to-white">
         <div className="container pt-12 md:py-10">
@@ -175,7 +173,7 @@ export default function Home() {
             ].map((testimonial, i) => (
               <Card key={i} className="p-6">
                 <CardContent>
-                  <p className="mb-4 text-muted-foreground">"{testimonial.content}"</p>
+                  <p className="mb-4 text-muted-foreground">{testimonial.content}</p>
                   <div className="font-semibold">{testimonial.name}</div>
                   <div className="text-sm text-muted-foreground">{testimonial.company}</div>
                 </CardContent>
@@ -191,7 +189,7 @@ export default function Home() {
         <p className="text-xl text-muted-foreground mb-8">联系我们，让我们一起将您的创意变为现实。</p>
         <Button size="lg">立即咨询</Button>
       </section>
-    </>
+    </main>
   )
 }
 

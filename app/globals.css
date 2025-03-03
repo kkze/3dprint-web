@@ -4,6 +4,7 @@
 
 @layer base {
   :root {
+    --header-height: 4rem; /* 64px */
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -33,8 +34,12 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
-  }
 
+
+  }
+  main {
+    padding-top: var(--header-height);
+  }
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -77,6 +82,25 @@
     will-change: transform;
     backface-visibility: hidden;
     /* height: 100vh; */
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* 确保body和html占满全屏 */
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* 修复滚动条跳动问题 */
+  html {
+    overflow-y: scroll;
   }
  
 }

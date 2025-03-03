@@ -5,8 +5,6 @@ import { Phone, Mail, MapPin, Linkedin } from "lucide-react";
 import "./globals.css";
 import { Wechat, Weibo } from "@/app/components/icons";
 import Header from "./components/header";
-import ScrollReset from "./components/scroll-reset";
-
 export const metadata: Metadata = {
   title: "3DPrint-Web - 专业的3D打印服务平台",
   description: "提供高质量、快速的3D打印解决方案，满足各行业需求。",
@@ -21,7 +19,8 @@ export default function RootLayout({
     <html lang="zh" className="scroll-smooth">
       <body className="min-h-screen bg-background font-sans antialiased">
         <Header />
-        <ScrollReset>{children}</ScrollReset>
+        {/* 使用children */}
+        {children}
         <footer className="border-t bg-muted/50">
           <div className="container grid gap-8 py-12 md:grid-cols-2 lg:grid-cols-4">
             <div>

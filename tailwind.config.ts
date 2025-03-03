@@ -1,3 +1,11 @@
+/*
+ * @Author: kkzh 1527227806@qq.com
+ * @Date: 2025-03-02 13:14:17
+ * @LastEditors: kkzh 1527227806@qq.com
+ * @LastEditTime: 2025-03-03 18:34:33
+ * @FilePath: \3dprint-web\tailwind.config.ts
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -55,7 +63,19 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+		spacing: {
+		'section': '3rem', // 默认section间距
+		'section-md': '5rem', // 中等屏幕section间距
+		},
+		container: {
+		center: true,
+		padding: {
+			DEFAULT: '1rem',
+			sm: '2rem',
+			lg: '4rem',
+		},
+		}
   	}
   },
   plugins: [require("tailwindcss-animate")],
