@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    experimental: {
-      optimizePackageImports: ['zustand']
-    }
-  };
+  experimental: {
+    optimizePackageImports: ['zustand']
+  }
+};
 export default nextConfig;

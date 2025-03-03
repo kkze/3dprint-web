@@ -1,16 +1,19 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useCallback } from 'react';
 import { scroller } from 'react-scroll';
 import throttle from 'lodash/throttle';
+import { useScrollStore } from '../store/useScrollStore';
 
 export default function ScrollHandler() {
-  const sections = ["Hero", "Materials", "Processing", "Modeling", "Printer",'Testimonials'];
-  const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
-  let isScrolling = false;
+  const sections = ["Hero", "Materials", "Processing", "Modeling", "Printer", "Testimonials"];
+  const currentSectionIndex = useScrollStore((state) => state.currentSectionIndex);
+  const setCurrentSectionIndex = useScrollStore((state) => state.setCurrentSectionIndex);
+  const isScrolling = useScrollStore((state) => state.isScrolling);
+  const setIsScrolling = useScrollStore((state) => state.setIsScrolling);
 
   // 处理滚动逻辑
-  const handleScroll = (direction: number) => {
+  const handleScroll = useCallback((direction: number) => {
     if (isScrolling) return;
 
     const nextSectionIndex = Math.min(
@@ -19,7 +22,7 @@ export default function ScrollHandler() {
     );
 
     if (nextSectionIndex !== currentSectionIndex) {
-      isScrolling = true;
+      setIsScrolling(true);
       setCurrentSectionIndex(nextSectionIndex);
 
       scroller.scrollTo(sections[nextSectionIndex], {
@@ -29,12 +32,12 @@ export default function ScrollHandler() {
       });
 
       setTimeout(() => {
-        isScrolling = false;
+        setIsScrolling(false);
       }, 500);
     }
-  };
+  }, [currentSectionIndex, sections, isScrolling, setCurrentSectionIndex, setIsScrolling]);
 
-  // 1. 滚轮事件（节流处理）
+  // 1. 滷轮事件（节流处理）
   useEffect(() => {
     const handleWheel = throttle((event: WheelEvent) => {
       event.preventDefault(); // 阻止默认滚动
@@ -47,7 +50,7 @@ export default function ScrollHandler() {
     return () => {
       window.removeEventListener('wheel', handleWheel);
     };
-  }, [currentSectionIndex]);
+  }, [handleScroll]);
 
   // 2. 触摸事件（移动设备支持）
   useEffect(() => {
@@ -71,7 +74,7 @@ export default function ScrollHandler() {
       window.removeEventListener('touchstart', handleTouchStart);
       window.removeEventListener('touchmove', handleTouchMove);
     };
-  }, [currentSectionIndex]);
+  }, [handleScroll]);
 
   // 3. 键盘导航（上下箭头键）
   useEffect(() => {
@@ -90,7 +93,7 @@ export default function ScrollHandler() {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [currentSectionIndex]);
+  }, [handleScroll]);
 
   // 不渲染任何 UI
   return null;
